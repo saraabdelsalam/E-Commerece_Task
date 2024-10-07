@@ -1,7 +1,7 @@
 from . import db
 
 class Order(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement =True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     status = db.Column(db.String(50), nullable=False)
 
