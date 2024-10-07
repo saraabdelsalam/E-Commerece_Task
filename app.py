@@ -1,11 +1,19 @@
 from flask import Flask
+from Api.UserController import bp
 from Models import db  # Import db from models
 from config import Config
+from flask_jwt_extended import JWTManager
+
 
 app = Flask(__name__)
 app.config.from_object(Config)
 
+app.config['JWT_SECRET_KEY'] = 'b75caa12108ece174b823116905e56482c51d158816bdfd6d7b2114d687eff208b42e22835b488093b16dc50b71ad333df6a6d4a540062bf0550c575457ff01a70a6e54317d02256decd8ec538c7eabb719a1c84cd4c20675d11adce7f94395cd5423c2f42845cd7b37127536bee30ab666eb5c952ccb892b829a52d18e1c50ac4de8284196967175ad18c3ca83d9614af565204b6d85949b182e4cc6ec1f09b8281df1009b8041641e051ee5621de9800b87835a56ecfb6cef308cd743eed384f04335f240c8902dfe66a89e09ab47b19b2c51cc530c11d86ab5502d368274c81f3aa41e24d93fea37a963bd65e43319bae9d36af9a53c430cd31ce8d503654'
+jwt = JWTManager(app)
 db.init_app(app)
+
+app.register_blueprint(bp)
 
 if __name__ == '__main__':
     app.run(debug=True)
+
