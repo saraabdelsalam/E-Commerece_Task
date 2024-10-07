@@ -32,4 +32,4 @@ def admin_only_page():
     current_user = get_jwt_identity()
     if current_user['role'] != 2: 
         return jsonify({"message": "Access forbidden: Admins only."}), 403
-    return jsonify({"message": f"Hello {current_user['email']}, welcome to the admin page!"})
+    return jsonify({"message": f"Hello {current_user['userName']}, welcome to the admin page!"})
