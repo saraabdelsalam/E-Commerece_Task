@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from Services.UserService import register_user
+from Services.UserService import register_user, validate_user_data
 from Services.AuthService import login_user
 from flask_jwt_extended import jwt_required, get_jwt_identity, get_current_user
 
@@ -9,10 +9,13 @@ bp = Blueprint('api', __name__)
 def register():
     try:
         user_data = request.json
+        validate_user_data(user_data)
         register_user(user_data)
         return jsonify({"message": "User registered successfully."}), 201
-    except Exception as e:
+    except ValueError as e:  # Catch validation errors
         return jsonify({"message": str(e)}), 400
+    except Exception as e:
+        return jsonify({"message": str(e)}), 500  # Internal server error for other exceptions
 
 
 @bp.route('/login', methods=['POST'])
