@@ -56,7 +56,7 @@ This project implements a RESTful API using Flask for a simple e-commerce applic
      python -m Repository.init_db
      ```
      note: if an error appears for flask-sqlalchemy moduleNotfound then use this command
-          ```bash
+     ```bash
      pip install flask-sqlalchemy
      ```
 5. Run the Flask application:
