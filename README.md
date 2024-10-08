@@ -39,7 +39,7 @@ This project implements a RESTful API using Flask for a simple e-commerce applic
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo-url
+   git clone [https://github.com/your-repo-url](https://github.com/saraabdelsalam/E-Commerece_Task.git)
    cd your-repo-directory
    ```
 
