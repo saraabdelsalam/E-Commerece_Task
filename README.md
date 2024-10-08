@@ -34,7 +34,7 @@ This project implements a RESTful API using Flask for a simple e-commerce applic
 - **OrderItems Table**: Stores information about items in each order.
 
 ### ER Diagram
-
+![alt text](https://github.com/saraabdelsalam/E-Commerece_Task/blob/main/E-Commerece_ER.png)
 
 ## Setup Instructions
 1. Clone the repository:
