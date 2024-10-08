@@ -53,9 +53,12 @@ This project implements a RESTful API using Flask for a simple e-commerce applic
    - Modify the database URI in `config.py` with your database configuration.
    - Run the following command to create the tables:
      ```bash
-     python -m models.py
+     python -m Repository.init_db
      ```
-
+     note: if an error appears for flask-sqlalchemy moduleNotfound then use this command
+          ```bash
+     pip install flask-sqlalchemy
+     ```
 5. Run the Flask application:
    ```bash
    flask run
