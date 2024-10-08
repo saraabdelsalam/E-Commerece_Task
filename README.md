@@ -39,28 +39,29 @@ This project implements a RESTful API using Flask for a simple e-commerce applic
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/your-repo-url](https://github.com/saraabdelsalam/E-Commerece_Task.git)
+   git clone https://github.com/saraabdelsalam/E-Commerece_Task.git
    cd your-repo-directory
    ```
 
 2. Install dependencies:
+   prerequisite: install python 3.12.7 first / install python extension in case using vs code
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Set up the database:
+4. Set up the database:
    - Modify the database URI in `config.py` with your database configuration.
    - Run the following command to create the tables:
      ```bash
      python -m models.py
      ```
 
-4. Run the Flask application:
+5. Run the Flask application:
    ```bash
    flask run
    ```
 
-5. Access the application on `http://127.0.0.1:5000/`.
+6. Access the application on `http://127.0.0.1:5000/`.
 
 ## API Documentation
 - You can view the API documentation for register endpoint using Postman. https://documenter.getpostman.com/view/30839468/2sAXxPAYWW#87e1101d-3018-4c7b-ba7d-66d6b2c8f718 for details about request parameters, responses, and error messages for the endpoint.
