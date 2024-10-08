@@ -63,4 +63,4 @@ This project implements a RESTful API using Flask for a simple e-commerce applic
 5. Access the application on `http://127.0.0.1:5000/`.
 
 ## API Documentation
-- You can view the full API documentation using Postman. Import the Postman collection from `api_docs/postman_collection.json` (if provided) for details about request parameters, responses, and error messages for each endpoint.
+- You can view the API documentation for register endpoint using Postman. https://documenter.getpostman.com/view/30839468/2sAXxPAYWW#87e1101d-3018-4c7b-ba7d-66d6b2c8f718 for details about request parameters, responses, and error messages for each endpoint.
