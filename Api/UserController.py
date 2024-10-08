@@ -39,3 +39,8 @@ def admin_only_page():
 def users_page():
     current_user = get_jwt_identity()
     return jsonify({"message": f"Hello {current_user['userName']}, welcome to our website!"})
+
+
+@bp.route('/visitors', methods=['GET'])
+def visitors_page():
+    return jsonify({"message": "Hello Visitor, welcome to our website!"})
